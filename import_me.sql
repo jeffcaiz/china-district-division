@@ -15,13 +15,13 @@ DROP TABLE IF EXISTS `district_division`;
 
 CREATE TABLE `district_division` (
   `id` smallint(5) unsigned NOT NULL,
-  `code` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `name` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT '',
-  `short_name` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT '',
+  `code` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `short_name` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `parent_id` smallint(5) unsigned NOT NULL DEFAULT '0',
   `list_order` tinyint(2) unsigned NOT NULL COMMENT '省内城市列表顺序，从小开始',
   `level` tinyint(1) unsigned NOT NULL,
-  `l1_name` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT '',
+  `l1_name` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `l1_id` smallint(5) unsigned NOT NULL,
   `l2_name` varchar(32) DEFAULT NULL,
   `l2_id` smallint(5) unsigned DEFAULT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE `district_division` (
   `l3_id` smallint(5) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `code` (`code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 LOCK TABLES `district_division` WRITE;
 /*!40000 ALTER TABLE `district_division` DISABLE KEYS */;
